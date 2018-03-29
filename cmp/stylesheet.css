@@ -1,0 +1,44 @@
+@font-face{
+	font-family: 'dosis',
+	src: url("Dosis-Regular.otf.otf") format("opentype");
+}
+.image-bg {
+    background-color: #006064;
+    height : 400px;
+}
+
+.about-me {
+	box-shadow: 0px 2px 2px 0px #37474F;
+	position: relative;
+	bottom: 250px;
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	z-index: 1;
+	background: #fff;
+}
+
+.about-me-title {
+	font-family: 'dosis',cursive;
+	color: blue;
+}
+
+.about-me-footer {
+	background-color: rgb(14, 181, 125);
+	min-height: 50px;
+}
+
+.b {
+	background-color: #ECEFF1;
+}
+
+.about-contact span.spec{
+	text-align: left;
+	display: inline-block;
+	min-width: 150px;
+}
+.about-contact span.contact-info{
+	text-align: left;
+	display: inline-block;
+	min-width: 150px;
+}

@@ -1,0 +1,2 @@
+START live-server 
+Exit

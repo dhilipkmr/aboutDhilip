@@ -1,0 +1,120 @@
+<!--<div class="h1 text-dark text-center font-weight-bold">{{details.welcomeText}}</div>-->
+<div class="container-fluid">
+
+</div>
+<div class="wrapper">
+    <div class="landingHeader" >
+        <!--ng-mouseover="addClassHeader($event)" ng-mouseleave="addClassHeader($event)"-->
+        <p class="font-weight-bold text-light text-center text-uppercase description" >Dhilip kumar</p>
+        <p class="text-center text-light intro">A Passionate WebDesigner</p>
+    </div>
+</div>
+
+<div class="skills">
+    <h3 class="text-center text-light"><span  class="technicalSkills  text-center d-inline-block">PROFESSIONAL</span></h3>
+    <section class="technicalSkillsSection" ng-mouseover=animateSkill()>
+        <!--<ul class="list-inline">-->
+            <!--<div  ng-repeat="item in details['skillSets']['technicalSkills'] as set">-->
+                <!--<div ng-if="$index % 3 == 0">-->
+                    <!--<div class ="row mx-auto">-->
+                        <!--<li class="list-inline-item col-3 m-1 btn btn-dark "><span>{{item}}</span></li>-->
+                        <!--<li class="list-inline-item col-3 m-1 btn btn-dark "><span>{{details['skillSets']['technicalSkills'] [$index+1]}}</span></li>-->
+                        <!--<li class="list-inline-item col-3 m-1 btn btn-dark "><span>{{details['skillSets']['technicalSkills'] [$index+2]}}</span></li>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</ul>-->
+        <div ng-repeat="(x,y) in details['skills']">
+            <div class="p-2">
+                <span class="font-weight-bold text-light mb-2 text-uppercase"> {{x}}
+                    <span class="progress">
+                        <span class="progress-bar text-justify mmm" style =" background-color: rgba(0, 214, 70, 1)" ng-style="{width : y+'%'}">{{y}}%</span>
+                        <!--<span class="progress-bar" style="background-color: transparent" ng-style="{width : 100- y+'%'}">{{100-y}}%</span>-->
+                    </span>
+                </span>
+            </div>
+        </div>
+        <!--<div ng-repeat="(x,y) in details['skills']">-->
+            <!--<div class="p-2 ">-->
+                <!--<span class=" font-weight-bold text-light mb-2"> {{x}} </span>-->
+                    <!--<span class=" mmm">{{y}}%</span></span>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+</div>
+<div class="container d-none">
+    <section class="education">
+        <p class="h3 text-uppercase font-weight-bold">Education</p>
+        <div ng-repeat="(key, value) in details['education']">
+            <p class="h4 d-block "> {{key}}</p>
+            <ul>
+                <li ng-repeat="(prop,val) in value">{{prop}} : {{val}}</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<div class="container">
+    <section class="workExperience">
+        <!--<div>-->
+            <!--<p class="h3 text-uppercase text-md-center mb-4 exp">Experience</p>-->
+            <!--<svg class="milestone">-->
+                <!--<circle r="6" fill="green" cx="20" cy="20"></circle>-->
+            <!--</svg>-->
+            <!--<span class="lineMs"></span>-->
+            <!--<div class="exp1">-->
+                <!--<p>2016 Jan - 2016 Jul</p>-->
+                <!--<p>Oracle India Pvt Ltd</p>-->
+                <!--<br>-->
+                <!--<p>Applications Developer IC 0 (Intern)</p>-->
+            <!--</div>-->
+            <!--<svg class="milestone2">-->
+                <!--<circle r="6" fill="green" cx="20" cy="20"></circle>-->
+            <!--</svg>-->
+            <!--<span class="lineMs"></span>-->
+            <!--<div class="exp1">-->
+                <!--<p>2016 Jan - 2016 Jul</p>-->
+                <!--<p>Oracle India Pvt Ltd</p>-->
+                <!--<br>-->
+                <!--<p>Applications Developer IC 1</p>-->
+                <!--<ul style="width : 50%;" >-->
+                    <!--<li>Implemented UI in our Application to allow it to Integrate itself with other Applications for data transfer which played a Key Role in helping customers migrate from a different product to our own</li>-->
+                    <!--<li>Created a Summary Dashboard on Data Transfers status that provided details on Job Status which made it easier for the customers to identify and rectify errors easily</li>-->
+                    <!--<li>Implemented Copy/Duplication feature for all wizards in the application which resulted in faster creation of flows, connections and mappings</li>-->
+                    <!--<li>Consumed REST Apis from Server side and built Interactive UI</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="exp1">-->
+                <!--<p>2017 Dec - Present</p>-->
+                <!--<p>Oracle India Pvt Ltd</p>-->
+                <!--<br>-->
+                <!--<p>Applications Developer IC 2</p>-->
+                <!--<ul style="width : 50%; float: right">-->
+                    <!--<li>Implemented changes in UI which helped users to Schedule a Job based on their choice</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <ul>
+            <div class="mb-4"ng-repeat="item in details['workExperience']">
+                <li>{{item.name}}</li>
+                <li>{{item.role}}</li>
+                <li>{{item.period}}</li>
+                <ul>
+                    <li ng-repeat="val in item['achievements']">{{val}}</li>
+                </ul>
+            </div>
+        </ul>
+    </section>
+</div>
+<div class="container d-none">
+    <section class="tools">
+        <p class="h3 text-uppercase font-weight-bold">Tools</p>
+        <ul>
+            <div class="mb-4"ng-repeat="(toolType, used) in details['tools']">
+                <p class="h5 text-uppercase font-weight-bold">{{toolType}}</p>
+                <ul>
+                    <li ng-repeat="val in used">{{val}}</li>
+                </ul>
+            </div>
+        </ul>
+    </section>
+</div>
