@@ -1,44 +1,118 @@
-@font-face{
-	font-family: 'dosis',
-	src: url("Dosis-Regular.otf.otf") format("opentype");
-}
+
 .image-bg {
     background-color: #006064;
     height : 400px;
 }
 
+.picture {
+	height: 150px;
+	width : 150px;
+	/*border-radius: 50%;*/
+	transition: 0.3s;
+}
+
+.picture:hover {
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
+	 transition: 0.3s;
+}
+
+.name {
+	font-family: 'Dosis', cursive;
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: #01b87a;
+    /*padding-left:15px;*/
+    line-height: 2;
+}
+.role{
+	font-family: 'Open Sans',Sans;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #455a64;
+    letter-spacing: 4;
+    line-height: 2;
+}
+
+.sides{
+	width:90% !important;
+	margin: auto;
+}
 .about-me {
-	box-shadow: 0px 2px 2px 0px #37474F;
+	/*box-shadow: 0px 1px 1px 0px #37474F;*/
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
 	position: relative;
 	bottom: 250px;
 	text-align: center;
 	width: 70%;
+	min-width: 270px;
 	margin: auto;
 	z-index: 1;
 	background: #fff;
+	
+}
+.picture:hover, .about-me:hover{
+	 box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
+	 transition: 0.3s;
 }
 
 .about-me-title {
-	font-family: 'dosis',cursive;
-	color: blue;
+	font-family: 'Dosis', cursive;
+	font-size: 25px;
+    letter-spacing: 5px;
+    line-height: 2;
+    color: #455a64;
 }
 
-.about-me-footer {
-	background-color: rgb(14, 181, 125);
-	min-height: 50px;
+.about-me-description {
+	font-family: 'Open Sans', 'Sans Serif';
+	line-height: 2;
+    color: #666666;
 }
+
 
 .b {
 	background-color: #ECEFF1;
 }
 
 .about-contact span.spec{
+	font-family: 'Open Sans', 'Sans Serif';
+	line-height: 2;
 	text-align: left;
 	display: inline-block;
-	min-width: 150px;
+	min-width: 80px;
+	color: #555555;
+	font-weight: 700;
+	font-size: 100%;
 }
 .about-contact span.contact-info{
+	font-family: 'Open Sans', 'Sans Serif';
+	line-height: 2;
 	text-align: left;
 	display: inline-block;
 	min-width: 150px;
+	color: #666666;
+}
+.about-me-footer {
+	background-color: rgb(14, 181, 125);
+	min-height: 65px;
+	width:100%;
+}
+
+@media screen and (max-width: 576px){
+	.side1, .side2 {
+		margin: 0px 10px;
+	}
+	.about-me-description {
+		margin-right: 15px !important;
+	}
+}
+@media screen and (min-width:577px and max-width: 768px){
+	.side2 {
+		text-align: left;
+		margin-left: 10px;
+	}
+	.about-contact {
+		text-align: left;
+	}
 }
