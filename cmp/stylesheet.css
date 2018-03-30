@@ -1,16 +1,17 @@
 
 .image-bg {
-    background-color: #006064;
+    background : linear-gradient( rgba(12, 24, 36, 0.75), rgba(12, 24, 36, 0.75) ) , url(/src/img/bg-1.jpg) 50% 0px / cover no-repeat;
     height : 400px;
 }
-
+.card-intro {
+	min-width: 290px;
+}
 .picture {
 	height: 150px;
 	width : 150px;
 	/*border-radius: 50%;*/
 	transition: 0.3s;
 }
-
 .picture:hover {
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
 	 transition: 0.3s;
@@ -33,9 +34,8 @@
     line-height: 2;
 }
 
-.sides{
-	width:90% !important;
-	margin: auto;
+.side1 {
+	margin-top: 100px;
 }
 .about-me {
 	/*box-shadow: 0px 1px 1px 0px #37474F;*/
@@ -51,7 +51,7 @@
 	background: #fff;
 	
 }
-.picture:hover, .about-me:hover{
+.picture:hover, .about-me:hover, .skills:hover{
 	 box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
 	 transition: 0.3s;
 }
@@ -62,12 +62,27 @@
     letter-spacing: 5px;
     line-height: 2;
     color: #455a64;
+    position: relative;
+}
+
+.about-me-title::after {
+	background-color: #0EB57D !important;
+	display: inline-block;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background: red;
+    border-radius: 30px;
 }
 
 .about-me-description {
 	font-family: 'Open Sans', 'Sans Serif';
-	line-height: 2;
+	line-height: 2.4;
     color: #666666;
+    margin-top: 20px;
 }
 
 
@@ -75,6 +90,10 @@
 	background-color: #ECEFF1;
 }
 
+.about-contact {
+	margin-top: 20px;
+	line-height: 2.4;
+}
 .about-contact span.spec{
 	font-family: 'Open Sans', 'Sans Serif';
 	line-height: 2;
@@ -99,7 +118,7 @@
 	width:100%;
 }
 
-@media screen and (max-width: 576px){
+/*@media screen and (max-width: 576px){
 	.side1, .side2 {
 		margin: 0px 10px;
 	}
@@ -107,7 +126,11 @@
 		margin-right: 15px !important;
 	}
 }
-@media screen and (min-width:577px and max-width: 768px){
+@media s
+creen and (min-width:577px and max-width: 768px){
+	.side1 {
+		margin-left: 10px;
+	}
 	.side2 {
 		text-align: left;
 		margin-left: 10px;
@@ -115,4 +138,57 @@
 	.about-contact {
 		text-align: left;
 	}
+}*/
+
+@media all and (max-width: 575px) {
+	.about-me-title::after {
+	display:none;
+	}
 }
+
+
+/*SECTION-Skills*/
+
+.skills-title {
+	position: relative;
+	bottom: 170px;
+	text-align: center;
+	font-family: 'Dosis',Sans Serif;
+	color: #555555;
+	letter-spacing: 2.4;
+	font-size: 24px;
+}
+.skillRow{
+	line-height: 3;
+    margin-bottom: 10px;
+    position: relative;
+}
+.skillName,.percent{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 600;
+	font-size: 14px;
+	color: #37474F !important;
+	letter-spacing: 1.4px;
+}
+.percent {
+	position: absolute;
+	left:85%;
+}
+.skills{
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+	position: relative;
+	bottom: 120px;
+	/*text-align: center;*/
+	width: 70%;
+	min-width: 270px;
+	margin: auto;
+	z-index: 1;
+	background: #fff;
+}
+
+.skillLevel {
+ background-color: #0EB57D !important;
+ height:5px !important;
+}
+

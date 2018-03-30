@@ -82,3 +82,54 @@ controllers.controller('LandingController',
         }
     };
 });
+
+
+resume.
+  component('skill1', {
+    template:
+        '<div ng-repeat="(prop, key) in $ctrl.technicalSkills1">' +
+            '<div class="row-12 skillRow">' +
+                '<div><span class="text-left skillName"> {{key[0]}}</span>' + '<span class="text-right percent">{{key[1]}}</span>' +
+                    '<div class="progress">' +
+                        '<div class="progress-bar skillLevel" ng-style = "{width : key[1]}"></div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
+    controller: function PhoneListController() {
+        this.technicalSkills1 = [
+            ['Javascript', '85%'],
+            ['JQuery', '90%'],
+            ['AngularJs', '60%'],
+            ['Bootstrap', '70%'],
+            ['React', '50%']
+            ];
+    }
+  });
+
+  resume.
+  component('skill2', {
+    template:
+        '<div ng-repeat="(prop, key) in $ctrl.technicalSkills2">' +
+            '<div class="row-12 skillRow">' +
+                '<div><span class="text-left skillName"> {{key[0]}}</span>' + '<span class="text-right percent">{{key[1]}}</span>' +
+                    '<div class="progress">' +
+                        '<div class="progress-bar skillLevel" ng-style="{width : key[1]}"> </div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
+    controller: function PhoneListController() {
+        this.technicalSkills2 = [
+            ['Backbone', '80%'],
+            ['HTML', '85%'],
+            ['Css', '75%'],
+            ['Java', '65%'],
+            ['SQL', '80%']
+            ];
+    }
+  });
+
+
+                
+                

@@ -1,18 +1,19 @@
 <div class="image-bg">
 	
 </div>
-<section class="about-me">
+<section class="about-me" > <!--style="display: none"-->
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row card-intro">
 			<div class="row">
-				<div class="col col-sm-5 col-12  mt-5 side1">
+				<div class="side1 col col-sm-5 col-11 mx-2">
 					<img src="/src/img/yahiko.png" class="picture" alt="profile_pic"></img>
 					<div class="name"> DHILIP KUMAR</div>
 					<div class="role"> DEVELOPER</div>
 				</div>
-				<div class="col col-sm-6 col-12 mt-5 side2 text-sm-left">
+				<div class="side2 col col-sm-6 col-11 mt-5 mx-2 text-sm-left">
 					<div class="about-me-title">ABOUT ME</div>
-					<div class="about-me-description ">{{details.shortDescription}}</div>
+					
+					<div class="about-me-description">{{details.shortDescription}}</div>
 					<div class="about-contact">
 						<ul class="list-unstyled">
 							<li>
@@ -36,8 +37,21 @@
 				</div>
 			</div>  <!--row-->
 			<div class="row text-left about-me-footer ml-0">
-					
+
 			</div>
 		</div> <!--row-->
 	</div>	<!--containerfluid-->
+</section>
+<div class="skills-title">SKILLS</div>
+<section class="skills">
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-sm-5 mt-4 mb-sm-5 col-12 mb-0 mx-auto">
+				<skill1></skill1>
+			</div>
+			<div class="col-sm-5 col-12 mt-sm-4 mb-5  mx-auto">
+				<skill2></skill2>
+			</div>
+		</div>
+	</div>
 </section>
