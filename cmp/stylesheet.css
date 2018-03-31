@@ -133,6 +133,10 @@
 	.about-me-title::after {
 	display:none;
 	}
+	.skills,.projects,.about-me {
+		width: 85%;
+	}
+
 }
 
 
