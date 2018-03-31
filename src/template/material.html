@@ -1,57 +1,72 @@
 <div class="image-bg">
-	
 </div>
-<section class="about-me" > <!--style="display: none"-->
+
+<!--  ABOUT ME -->
+<section class="about-me"> <!---->
 	<div class="container-fluid">
 		<div class="row card-intro">
 			<div class="row">
 				<div class="side1 col col-sm-5 col-11 mx-2">
 					<img src="/src/img/yahiko.png" class="picture" alt="profile_pic"></img>
 					<div class="name"> DHILIP KUMAR</div>
-					<div class="role"> DEVELOPER</div>
+					<div class="role"> UI/UX DESIGNER & FRONTEND DEVELOPER</div>
 				</div>
 				<div class="side2 col col-sm-6 col-11 mt-5 mx-2 text-sm-left">
 					<div class="about-me-title">ABOUT ME</div>
-					
 					<div class="about-me-description">{{details.shortDescription}}</div>
 					<div class="about-contact">
-						<ul class="list-unstyled">
-							<li>
-								<span class="spec">Age</span>
-								<span class="contact-info">23</span>
-							</li>
-							<li>
-								<span class="spec">Address</span>
-								<span class="contact-info">B 103, Isha Casablanca</span>
-							</li>
-							<li>
-								<span class="spec">Email</span>
-								<span class="contact-info">dhilip1211@gmail.com</span>
-							</li>
-							<li>
-								<span class="spec">Phone</span>
-								<span class="contact-info">+91-9750568258</span>
-							</li>
+						<ul class="list-unstyled" ng-repeat="val in contactDetails">
+							<li >
+								<span class="spec">{{val[0]}}</span>
+								<span class="contact-info">{{val[1]}}</span>
+							</li>	
 						</ul>
 					</div>
 				</div>
-			</div>  <!--row-->
+			</div> 
 			<div class="row text-left about-me-footer ml-0">
-
 			</div>
-		</div> <!--row-->
-	</div>	<!--containerfluid-->
+		</div> 
+	</div>
 </section>
+
+<!-- SKILLS -->
 <div class="skills-title">SKILLS</div>
 <section class="skills">
 	<div class="container">
 		<div class="row mx-auto">
-			<div class="col-sm-5 mt-4 mb-sm-5 col-12 mb-0 mx-auto">
+			<div class="col-12 col-sm-5 mt-4 mb-sm-5 mb-0 mx-auto">
 				<skill1></skill1>
 			</div>
-			<div class="col-sm-5 col-12 mt-sm-4 mb-5  mx-auto">
+			<div class="col-12 col-sm-5 mt-sm-4 mb-5  mx-auto">
 				<skill2></skill2>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- PORTFOLIO -->
+<div class="projects-title">PORTFOLIO</div>
+<section  class="projects mt-5">
+	<div class="container-fluid mb-5">
+		<div class="row" >
+			<div class="col-12 col-sm-6 col-lg-4 mt-4" ng-repeat="val in portfolioDetails">
+				<div class="project-cards" ng-mouseOver = "showDescription($event)" ng-mouseLeave = "showDescription($event)" >
+					<div class="col">
+						<div class ="initial">
+							<div class="text-center"><i class="fa mt-4 fa-2x icon" ng-class="[val[1]]"></i></div>
+						<div class="portfolio-card-info pt-2">{{val[0]}}</div>
+					</div>
+					</div>
+					<div class="col portfolio-card-description hidden">
+						<p>{{val[2]}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+	<p class="footer-text"> © ALL RIGHTS RESERVED.</p>
+</footer>

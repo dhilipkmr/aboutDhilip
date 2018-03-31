@@ -9,12 +9,21 @@
 .picture {
 	height: 150px;
 	width : 150px;
-	/*border-radius: 50%;*/
+	border-radius: 8%;
 	transition: 0.3s;
 }
-.picture:hover {
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
+.picture:hover, .about-me:hover{
+	  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);
 	 transition: 0.3s;
+}
+.skills:hover{
+	 box-shadow: 0px 6px 6px 2px rgba(0,0,0,0.3);
+	 transition: 0.3s;
+}
+.project-cards:hover{
+	 box-shadow: 12px 6px 40px 0 rgba(0,0,0,0.3);
+	 transition: 1s;
+	 /*bottom:10px;*/
 }
 
 .name {
@@ -30,7 +39,7 @@
     text-transform: uppercase;
     font-weight: bold;
     color: #455a64;
-    letter-spacing: 4;
+    letter-spacing: 2;
     line-height: 2;
 }
 
@@ -39,10 +48,10 @@
 }
 .about-me {
 	/*box-shadow: 0px 1px 1px 0px #37474F;*/
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
 	position: relative;
-	bottom: 250px;
+	bottom: 262px;
 	text-align: center;
 	width: 70%;
 	min-width: 270px;
@@ -51,10 +60,7 @@
 	background: #fff;
 	
 }
-.picture:hover, .about-me:hover, .skills:hover{
-	 box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
-	 transition: 0.3s;
-}
+
 
 .about-me-title {
 	font-family: 'Dosis', cursive;
@@ -112,33 +118,16 @@
 	min-width: 150px;
 	color: #666666;
 }
+.linkedInUrl {
+	color: #01579B !important;
+	text-decoration: underline;
+
+}
 .about-me-footer {
 	background-color: rgb(14, 181, 125);
 	min-height: 65px;
 	width:100%;
 }
-
-/*@media screen and (max-width: 576px){
-	.side1, .side2 {
-		margin: 0px 10px;
-	}
-	.about-me-description {
-		margin-right: 15px !important;
-	}
-}
-@media s
-creen and (min-width:577px and max-width: 768px){
-	.side1 {
-		margin-left: 10px;
-	}
-	.side2 {
-		text-align: left;
-		margin-left: 10px;
-	}
-	.about-contact {
-		text-align: left;
-	}
-}*/
 
 @media all and (max-width: 575px) {
 	.about-me-title::after {
@@ -149,7 +138,7 @@ creen and (min-width:577px and max-width: 768px){
 
 /*SECTION-Skills*/
 
-.skills-title {
+.skills-title{
 	position: relative;
 	bottom: 170px;
 	text-align: center;
@@ -163,6 +152,7 @@ creen and (min-width:577px and max-width: 768px){
     margin-bottom: 10px;
     position: relative;
 }
+
 .skillName,.percent{
 	font-family: 'Open Sans', Sans Serif;
 	font-weight: 600;
@@ -175,7 +165,7 @@ creen and (min-width:577px and max-width: 768px){
 	left:85%;
 }
 .skills{
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
 	position: relative;
 	bottom: 120px;
@@ -192,3 +182,101 @@ creen and (min-width:577px and max-width: 768px){
  height:5px !important;
 }
 
+/*ACHIEVEMENTS*/
+.projects-title {
+	text-align: center;
+	font-family: 'Dosis',Sans Serif;
+	color: #555555;
+	letter-spacing: 2.4;
+	font-size: 24px;
+}
+
+.projects {
+	width: 70%;
+	margin : auto;
+}
+.rowPorfolio {
+	margin: auto;
+}
+
+.project-cards {
+	background-color: #fff;
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+	min-width: 200px !important;
+	/*min-width: 70% !important;
+	max-height:208px !important;*/
+	height: 200px;;
+	position: relative;
+	transition: 0.5s;
+
+
+}
+/*.project-cards {
+	cursor: pointer;
+	display: none;
+
+}*/
+.icon {
+ color :rgb(14, 181, 115);
+ font-size: 1.5em;
+}
+
+.portfolio-card-info {
+	font-family: 'Dosis', cursive;
+	font-size: 18px;
+    letter-spacing: 3px;
+    font-weight : 600;
+    line-height: 2;
+    color: #455a64;
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+}
+
+.portfolio-card-info::after{
+	background-color: #0EB57D !important;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom : -50%;
+    width: 20%;
+    height: 3px;
+    border-radius: 30px;
+}
+
+.portfolio-card-description{
+	position: relative;
+	font-family: ''
+	width: 90%;
+	top:20px;
+	margin: auto;
+	font-family: 'Open Sans', Sans Serif;
+	line-height: 2.5;
+	color : #455a64;
+	font-weight: 600;
+}
+
+.hidden{
+	display: none !important;
+}
+
+
+
+
+
+
+.footer {
+	position: relative;
+	background-color: rgb(14, 181, 125);
+	min-height: 65px;
+	width:100%;
+}
+.footer-text {
+	text-align: center;
+	padding-top: 20px;
+	color: #ffffff;
+}
