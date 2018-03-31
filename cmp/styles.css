@@ -206,6 +206,17 @@
   margin-top: 15px;
   margin-bottom: 30px;
 }
+.projects .project-cards .portfolio-card-info::after {
+  background-color: #0EB57D !important;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: -50%;
+  width: 20%;
+  height: 3px;
+  border-radius: 30px;
+}
 .projects .project-cards .portfolio-card-description {
   position: relative;
   font-family: '';
