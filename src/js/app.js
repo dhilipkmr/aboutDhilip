@@ -14,4 +14,3 @@ resume.config(['$routeProvider', function($routeProvider){
             controller : 'LandingController'
         });
 }]);
-

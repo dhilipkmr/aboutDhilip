@@ -1,418 +1,400 @@
-
 .image-bg {
-    background : linear-gradient( rgba(12, 24, 36, 0.75), rgba(12, 24, 36, 0.75) ) , url(/src/img/bg-1.jpg) 50% 0px / cover no-repeat;
-    height : 400px;
+  background: linear-gradient(rgba(12, 24, 36, 0.75), rgba(12, 24, 36, 0.75)), url(/src/img/bg-1.jpg) 50% 0px / cover no-repeat;
+  height: 400px;
 }
-.card-intro {
-	min-width: 290px;
+.hidden {
+  display: none !important;
 }
-.picture {
-	height: 150px;
-	width : 150px;
-	border-radius: 8%;
-	transition: 0.3s;
+.b {
+  background-color: #ECEFF1;
 }
-.picture:hover, .about-me:hover{
-	  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);
-	 transition: 0.3s;
+.picture:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
-.skills:hover{
-	 box-shadow: 0px 6px 6px 2px rgba(0,0,0,0.3);
-	 transition: 0.3s;
+.about-me:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
-.project-cards:hover{
-	 box-shadow: 12px 6px 40px 0 rgba(0,0,0,0.3);
-	 transition: 1s;
-	 /*bottom:10px;*/
+.skills:hover {
+  box-shadow: 0px 6px 6px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
-
-.name {
-	font-family: 'Dosis', cursive;
-    font-size: 30px;
-    letter-spacing: 5px;
-    color: #01b87a;
-    /*padding-left:15px;*/
-    line-height: 2;
-}
-.role{
-	font-family: 'Open Sans',Sans;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #455a64;
-    letter-spacing: 2;
-    line-height: 2;
-}
-
-.side1 {
-	margin-top: 100px;
+@media all and (max-width: 991px) {
+  .about-me-title::after {
+    display: none;
+  }
+  .skills,
+  .projects,
+  .about-me {
+    width: 90% !important;
+  }
+  .timeLine{
+    width: 80% !important;
+  }
 }
 .about-me {
-	/*box-shadow: 0px 1px 1px 0px #37474F;*/
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-    transition: 0.3s;
-	position: relative;
-	bottom: 262px;
-	text-align: center;
-	width: 70%;
-	min-width: 270px;
-	margin: auto;
-	z-index: 1;
-	background: #fff;
-	
+  /*box-shadow: 0px 1px 1px 0px #37474F;*/
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  position: relative;
+  bottom: 262px;
+  text-align: center;
+  width: 70%;
+  min-width: 270px;
+  margin: auto;
+  z-index: 1;
+  background: #fff;
 }
-
-
-.about-me-title {
-	font-family: 'Dosis', cursive;
-	font-size: 25px;
-    letter-spacing: 5px;
-    line-height: 2;
-    color: #455a64;
-    position: relative;
+.about-me .card-intro .side1 {
+  margin-top: 100px;
 }
-
-.about-me-title::after {
-	background-color: #0EB57D !important;
-	display: inline-block;
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 70px;
-    height: 3px;
-    background: red;
-    border-radius: 30px;
+.about-me .card-intro .side1 .picture {
+  height: 150px;
+  width: 150px;
+  border-radius: 8%;
+  transition: 0.3s;
 }
-
-.about-me-description {
-	font-family: 'Open Sans', 'Sans Serif';
-	line-height: 2.4;
-    color: #666666;
-    margin-top: 20px;
+.about-me .card-intro .side1 .name {
+  font-family: 'Dosis', cursive;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #01b87a;
+  /*padding-left:15px;*/
+  line-height: 2;
 }
-
-
-.b {
-	background-color: #ECEFF1;
+.about-me .card-intro .side1 .role {
+  font-family: 'Open Sans', Sans;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #455a64;
+  letter-spacing: 2;
+  line-height: 2;
 }
-
-.about-contact {
-	margin-top: 20px;
-	line-height: 2.4;
+.about-me .card-intro .side2 .about-me-title {
+  font-family: 'Dosis', cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  line-height: 2;
+  color: #455a64;
+  position: relative;
 }
-.about-contact span.spec{
-	font-family: 'Open Sans', 'Sans Serif';
-	line-height: 2;
-	text-align: left;
-	display: inline-block;
-	min-width: 80px;
-	color: #555555;
-	font-weight: 700;
-	font-size: 100%;
+.about-me .card-intro .side2 .about-me-title::after {
+  background-color: #0EB57D !important;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 3px;
+  background: red;
+  border-radius: 30px;
 }
-.about-contact span.contact-info{
-	font-family: 'Open Sans', 'Sans Serif';
-	line-height: 2;
-	text-align: left;
-	display: inline-block;
-	min-width: 150px;
-	color: #666666;
+.about-me .card-intro .side2 .about-me-description {
+  font-family: 'Open Sans', 'Sans Serif';
+  line-height: 2.4;
+  color: #666666;
+  margin-top: 20px;
 }
-.linkedInUrl {
-	color: #01579B !important;
-	text-decoration: underline;
-
+.about-me .card-intro .side2 .about-contact {
+  margin-top: 20px;
+  line-height: 2.4;
 }
-.about-me-footer {
-	background-color: rgb(14, 181, 125);
-	min-height: 65px;
-	width:100%;
+.about-me .card-intro .side2 .about-contact span.spec {
+  font-family: 'Open Sans', 'Sans Serif';
+  line-height: 2;
+  text-align: left;
+  display: inline-block;
+  min-width: 80px;
+  color: #555555;
+  font-weight: 700;
+  font-size: 100%;
 }
-
-@media all and (max-width: 575px) {
-	.about-me-title::after {
-	display:none;
-	}
-	.skills,.projects,.about-me {
-		width: 85%;
-	}
-
+.about-me .card-intro .side2 .about-contact span.contact-info {
+  font-family: 'Open Sans', 'Sans Serif';
+  line-height: 2;
+  text-align: left;
+  display: inline-block;
+  min-width: 150px;
+  color: #666666;
 }
-
-
-/*SECTION-Skills*/
-
-.skills-title{
-	position: relative;
-	bottom: 170px;
-	text-align: center;
-	font-family: 'Dosis',Sans Serif;
-	color: #555555;
-	letter-spacing: 2.4;
-	font-size: 24px;
+.about-me .card-intro .about-me-footer {
+  background-color: #0eb57d;
+  min-height: 65px;
+  width: 100%;
 }
-.skillRow{
-	line-height: 3;
-    margin-bottom: 10px;
-    position: relative;
+/*-Skills*/
+.skills-title {
+  position: relative;
+  bottom: 170px;
+  text-align: center;
+  font-family: 'Dosis', Sans Serif;
+  color: #555555;
+  letter-spacing: 2.4;
+  font-size: 24px;
 }
-
-.skillName,.percent{
-	font-family: 'Open Sans', Sans Serif;
-	font-weight: 600;
-	font-size: 14px;
-	color: #37474F !important;
-	letter-spacing: 1.4px;
+.skills {
+  /*text-align: center;*/
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  position: relative;
+  bottom: 120px;
+  width: 70%;
+  min-width: 270px;
+  margin: auto;
+  z-index: 1;
+  background: #fff;
 }
-.percent {
-	position: absolute;
-	left:85%;
+.skills .skillRow {
+  line-height: 3;
+  margin-bottom: 10px;
+  position: relative;
 }
-.skills{
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-    transition: 0.3s;
-	position: relative;
-	bottom: 120px;
-	/*text-align: center;*/
-	width: 70%;
-	min-width: 270px;
-	margin: auto;
-	z-index: 1;
-	background: #fff;
+.skills .skillName,
+.skills .percent {
+  font-family: 'Open Sans', Sans Serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #37474F !important;
+  letter-spacing: 1.4px;
 }
-
-.skillLevel {
- background-color: #0EB57D !important;
- height:5px !important;
+.skills .percent {
+  position: absolute;
+  left: 85%;
 }
-
-/*ACHIEVEMENTS*/
+.skills .skillLevel {
+  background-color: #0EB57D !important;
+  height: 5px !important;
+}
+/*PORTFOLIO*/
 .projects-title {
-	text-align: center;
-	font-family: 'Dosis',Sans Serif;
-	color: #555555;
-	letter-spacing: 2.4;
-	font-size: 24px;
+  text-align: center;
+  font-family: 'Dosis', Sans Serif;
+  color: #555555;
+  letter-spacing: 2.4;
+  font-size: 24px;
 }
-
 .projects {
-	width: 70%;
-	margin : auto;
+  width: 70%;
+  margin: auto;
 }
-.rowPorfolio {
-	margin: auto;
+.projects .project-cards {
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  min-width: 200px !important;
+  /*min-width: 70% !important;
+    max-height:208px !important;*/
+  height: 200px;
+  position: relative;
+  transition: 0s;
 }
-
-.project-cards {
-	background-color: #fff;
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-    transition: 0.3s;
-	min-width: 200px !important;
-	/*min-width: 70% !important;
-	max-height:208px !important;*/
-	height: 200px;;
-	position: relative;
-	transition: 0.5s;
-
-
+.projects .project-cards .icon {
+  color: #0eb573;
+  font-size: 1.5em;
 }
-/*.project-cards {
-	cursor: pointer;
-	display: none;
-
-}*/
-.icon {
- color :rgb(14, 181, 115);
- font-size: 1.5em;
+.projects .project-cards .portfolio-card-info {
+  font-family: 'Dosis', cursive;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  line-height: 2;
+  color: #455a64;
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
-
-.portfolio-card-info {
-	font-family: 'Dosis', cursive;
-	font-size: 18px;
-    letter-spacing: 3px;
-    font-weight : 600;
-    line-height: 2;
-    color: #455a64;
-    position: relative;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
-
+.projects .project-cards .portfolio-card-info::after {
+  background-color: #0EB57D !important;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: -50%;
+  width: 20%;
+  height: 3px;
+  border-radius: 30px;
 }
-
-.portfolio-card-info::after{
-	background-color: #0EB57D !important;
-    display: inline-block;
-    content: '';
-    position: absolute;
-    left: 40%;
-    bottom : -50%;
-    width: 20%;
-    height: 3px;
-    border-radius: 30px;
+.projects .project-cards .portfolio-card-description {
+  position: relative;
+  font-family: '';
+  width: 90%;
+  top: 20px;
+  margin: auto;
+  font-family: 'Open Sans', Sans Serif;
+  line-height: 2.5;
+  color: #455a64;
+  font-weight: 600;
+  font-size: 14px;
 }
-
-.portfolio-card-description{
-	position: relative;
-	font-family: ''
-	width: 90%;
-	top:20px;
-	margin: auto;
-	font-family: 'Open Sans', Sans Serif;
-	line-height: 2.5;
-	color : #455a64;
-	font-weight: 600;
-	font-size: 14px;
+.projects .project-cards:hover {
+  box-shadow: 12px 6px 40px 0 rgba(0, 0, 0, 0.3);
+  transition: 1s;
+  font-size: 14px;
 }
-
-.hidden{
-	display: none !important;
-}
-
-
-
-
-
-
-.footer {
-	background-color: rgb(14, 181, 125);
-	height: 65px;
-	width:100%;
-}
-.footer-text {
-	text-align: center;
-	padding-top: 20px;
-	color: #ffffff;
-	font-weight: 600;
-}
-
-/*Experience*/
-
-.orgName {
-	/*font-family: 'Dosis', Sans Serif;*/
-	font-size: 15px;
-    font-weight: 600;
-    color: #777777;
-    text-transform: capitalize;
-    letter-spacing: 1.4;
-}
-.tl-card-projTopic{
-	display: inline-block;
-	position: relative;
-}
-.tl-card-projDes{
-	/*display: inline-block;*/
-	position: relative;
-	left:10%;
-}
-.tl-card-desc{
-	font-weight: 600;
-}
-.designation {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 14px;
-	letter-spacing: 1.4;
-	color: #3E595E;
-}
-
-
-.period{
-	font-size: 12px;
-	color : #01B879;
-	font-weight: 700;
-}
-
-.timeLine {
-	/*box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-    transition: 0.3s;*/
-	position: relative;
-	width: 80%;
-	min-width: 270px;
-	margin: auto;
-}
-.experience-card-start{ 
-	position: relative;
-}
+/*Experience & Edu*/
 .timeLine-title {
-	font-family: 'Dosis', cursive;
-	font-size: 25px;
-    letter-spacing: 5px;
-    line-height: 2;
-    color: #455a64;
-    position: relative;
-    margin-bottom: 50px;
+  font-family: 'Dosis', cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  line-height: 2;
+  color: #455a64;
+  position: relative;
+  margin-bottom: 50px;
+}
+.timeLine {
+  position: relative;
+  width: 80%;
+  min-width: 270px;
+  margin: auto;
+}
+.timeLine .timeLine-card {
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  min-width: 200px !important;
+  /*height: 200px;;*/
+  position: relative;
+  transition: 0.5s;
+  line-height: 2.5;
+}
+.timeLine .timeLine-card .orgName {
+  /*font-family: 'Dosis', Sans Serif;*/
+  font-size: 15px;
+  font-weight: 600;
+  color: #777777;
+  text-transform: capitalize;
+  letter-spacing: 1.4;
+}
+.timeLine .timeLine-card .designation {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.4;
+  color: #3E595E;
+}
+.timeLine .timeLine-card .tl-card-projTopic {
+  display: inline-block;
+  position: relative;
+}
+.timeLine .timeLine-card .tl-card-projDes {
+  /*display: inline-block;*/
+  position: relative;
+  left: 10%;
+}
+.timeLine .timeLine-card .tl-card-desc {
+  font-weight: 600;
+}
+.timeLine .timeLine-card .period {
+  font-size: 12px;
+  color: #01B879;
+  font-weight: 700;
+}
+.timeLine .timeLine-card:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+.timeLine .timeLine-card::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  top: 33px;
+  right: -34px;
+  border: 4px solid green;
+  z-index: 1;
+  border-radius: 50%;
+}
+.timeLine .timeLine-card.left {
+  left: 0;
+}
+.timeLine .timeLine-card.left::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 100%;
+  border: medium solid white;
+  border-width: 15px 0px 15px 15px;
+  border-color: transparent transparent transparent white;
+}
+.timeLine .timeLine-card.right::before {
+  content: '';
+  height: 0px;
+  top: 22px;
+  z-index: 1;
+  width: 0;
+  left: -14px;
+  position: absolute;
+  border: medium solid black;
+  border-width: 15px 15px 15px 0px;
+  border-color: transparent white transparent;
+}
+.timeLine .timeLine-card.right::after {
+  left: -35px;
+}
+.timeLine::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -4px;
+}
+.footer {
+  background-color: #0eb57d;
+  height: 65px;
+  width: 100%;
+}
+.footer .footer-text {
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.portfolioCard {
+    padding-left: 0px !important;
+  }
+
+
+@media all and (max-width: 767px) {
+
+  .timeline::after{
+      left: -15px !important;
+  }
+  .timeline .timeline-card{
+  	margin-top: 5px;
+  	margin-bottom: 5px;
+  }
+  .timeLine .timeLine-card.left::before {
+  content: '';
+  height: 0px;
+  top: 22px;
+  z-index: 1;
+  width: 0;
+  left: -14px;
+  position: absolute;
+  border: medium solid black;
+  border-width: 15px 15px 15px 0px;
+  border-color: transparent white transparent;
+}
+.timeLine .timeLine-card.left::after {
+  left: -35px;
+}
+.rm-pr{
+    padding-right: 0px !important;
+  }
 }
 
-.timeLine-card {
-	background-color: #fff;
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-    transition: 0.3s;
-	min-width: 200px !important;
-	/*height: 200px;;*/
-	position: relative;
-	transition: 0.5s;
-	line-height: 2.5;
-}
-
-.timeLine-card:hover{
-	 box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);
-	 transition: 0.3s;
-}
-
-.timeLine::after{
-	content: '';
-    position: absolute;
-    width: 7px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -4px;
-}
-
-.timeLine-card::after{
-	content: '';
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    background-color: green;
-    top: 33px;
-    right: -34px;
-	border: 4px solid green;
-	z-index: 1;
-	border-radius: 50%;
-}
-.left {
-    left: 0;
-}
-.left::before {
-    content: "";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left:100%;
-    border: medium solid white;
-    border-width: 15px 0px 15px 15px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before{
-	content: '';
-	height:0px;
-	top:22px;
-	z-index: 1;
-	width: 0;
-	left: -14px;
-	position: absolute;
-	border: medium solid black;
-    border-width: 15px 15px 15px 0px;
-    border-color: transparent white transparent;
-
-
-}
-.right::after {
-    left: -35px;
+@media all and (max-width:575px) {
+  .portfolioCard {
+    padding: 0px !important;
+  }
 }
