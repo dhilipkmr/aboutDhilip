@@ -5,14 +5,41 @@
  var templ;
 
  controllers.controller('LandingController',
-    function LandingControllerFnc($scope){
+    function LandingControllerFnc($scope, $interval){
         $scope.showDescription = function(e){
             if(e.type === "mouseover"){
                 e.currentTarget.children[0].classList.add('hidden');
+                $(e.currentTarget).fadeIn(2000);
                 e.currentTarget.children[1].classList.remove('hidden');
             } else if (e.type === "mouseleave") {
                 e.currentTarget.children[0].classList.remove('hidden');
                 e.currentTarget.children[1].classList.add('hidden');
+                setTimeout(function(){
+                    e.currentTarget.children[1].classList.remove('hidden');
+                },3);
+            }
+        };
+        $scope.handleMouseNav = function(e){
+            if(e.type === "mouseover"){
+                var self = e,x=0;
+                  e.currentTarget.style.borderBottom = "1px solid #fff";
+                  e.currentTarget.style.width = x; 
+                  var interval = setInterval(function(){
+                    self.currentTarget.style.width= ++x +"%";
+                    if(x==100){
+                        clearInterval(interval);
+                    }
+                  },2);
+            } else if (e.type === "mouseleave") {
+                var self = e,x;
+                  e.currentTarget.style.borderBottom = "1px solid #fff";
+                  x = e.currentTarget.style.width ;
+                  var interval = setInterval(function(){
+                    self.currentTarget.style.width= --(x.parseInt()) +"%";
+                    if(x==0){
+                        clearInterval(interval);
+                    }
+                  },2);
             }
         };
 
@@ -85,7 +112,7 @@ component('skill1', {
     '<div class="row-12 skillRow">' +
     '<div><span class="text-left skillName"> {{key[0]}}</span>' + '<span class="text-right percent">{{key[1]}}</span>' +
     '<div class="progress">' +
-    '<div class="progress-bar skillLevel" ng-style = "{width : key[1]}"></div>' +
+    '<div class="progress-bar  skillLevel"></div>' +
     '</div>' +
     '</div>' +
     '   </div>' +
@@ -93,7 +120,7 @@ component('skill1', {
     controller: function PhoneListController() {
         this.technicalSkills1 = [
         ['Javascript', '85%'],
-        ['JQuery', '90%'],
+         ['JQuery', '90%'],
         ['AngularJs', '60%'],
         ['Bootstrap', '70%'],
         ['React', '50%']
@@ -108,7 +135,7 @@ component('skill2', {
     '<div class="row-12 skillRow">' +
     '<div><span class="text-left skillName"> {{key[0]}}</span>' + '<span class="text-right percent">{{key[1]}}</span>' +
     '<div class="progress">' +
-    '<div class="progress-bar skillLevel" ng-style="{width : key[1]}"> </div>' +
+    '<div class="progress-bar skillLevel"> </div>' +
     '</div>' +
     '</div>' +
     '</div>' +

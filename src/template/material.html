@@ -1,5 +1,19 @@
 <div class="image-bg">
 </div>
+<div class="hidden navbar navbar-expand-sm" id="navigationCtrl">
+	<!-- <div class="navbar-brand"></div> -->
+	<div class="navbar-nav collapse" id="navContainer">
+		<a class="nav-item nav-link active" ng-mouseOver="handleMouseNav($event)" ng-mouseLeave="handleMouseNav($event)"id="skillNav" >Skills</a>
+		<a class="nav-item nav-link active" href="skills" >Portfolio</a>
+		<a class="nav-item nav-link active" href="#">Education</a>
+		<a class="nav-item nav-link active" href="#">Experience</a>
+	</div>
+	<nav class="navbar navbar-dark bg-primary">
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContainer" aria-controls="navContainer" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+  </nav>
+</div>
 
 <!--  ABOUT ME -->
 <section class="about-me"> <!---->
@@ -32,9 +46,9 @@
 </section>
 
 <!-- SKILLS -->
-<div class="skills-title">SKILLS</div>
-<section class="skills">
-	<div class="container">
+<div  class="skills-title">SKILLS</div>
+<section id="skills" class="skills">
+	<div  class="container-fluid">
 		<div class="row mx-auto">
 			<div class="col-12 col-sm-5 mt-4 mb-sm-5 mb-0 mx-auto">
 				<skill1></skill1>
@@ -48,19 +62,19 @@
 
 <!-- PORTFOLIO -->
 <div class="projects-title">PORTFOLIO</div>
-<section   class="projects mt-5">
+<section class="projects mt-5">
 	<div class="container-fluid mb-5">
 		<div class="row" >
 			<div class="portfolioCard col-12 col-sm-6 col-lg-4 mt-4" ng-repeat="val in portfolioDetails">
-				<div class="project-cards" ng-mouseOver = "showDescription($event)" ng-mouseLeave = "showDescription($event)" >
-					<div class="col">
-						<div class ="initial">
+				<div class="project-cards" ng-mouseOver = "showDescription($event)" ng-mouseLeave = "showDescription($event)">
+					<div class="col info">
+						<div >
 							<div class="text-center"><i class="fa mt-4 fa-2x icon" ng-class="[val[1]]"></i>
 							</div>
 							<div class="portfolio-card-info pt-2">{{val[0]}}</div>
 						</div>
 					</div>
-					<div class="col portfolio-card-description hidden">
+					<div class="col portfolio-card-description">
 						<p>{{val[2]}}</p>
 					</div>
 				</div>
@@ -94,7 +108,7 @@
 
 
 <!-- EXPERIENCE -->
-<div class="timeLine-title text-center mt-5">PROFESSIONAL EXPERIENCE</div>
+<div class="timeLine-title text-center mt-5" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
 <section class="timeLine mb-5">
 	<div class="row" ng-repeat="entry in experience">
 		<div class="col-md-6 col-0" ng-if="($index%2 ==1)"></div>
