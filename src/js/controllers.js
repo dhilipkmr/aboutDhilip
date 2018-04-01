@@ -44,12 +44,12 @@
         };
 
         $scope.portfolioDetails =  [
-        ['DASHBOARD',           'fa-chart-line',  'A Summary Dashboard on Data Transfers Status for each Jobs that are Triggered to Identify and Rectify Errors'],
+        ['DASHBOARD',           'fa-chart-line',  'A Summary Dashboard on Data Transfers Status for each Jobs to Identify & Rectify Errors'],
         ['JOB SCHEDULE',        'fa-clock',  'Implemented Wizard which allows Users to Schedule a Job based on their Choice'],
         ['QUICK SAVE',          'fa-save',  'Ability to Immediately Save Flows before the Last Screen, helped in faster modification of Flows'],
         ['TREE GRID',           'fa-th',  'Reduced the Page Loading time by implementing Lazy Load functionality as a part of Tree Grid'],
         ['QUICK FILTERS',       'fa-filter',  'Condition based Record Filtering for Grids, based on Job\'s Start/End Time and Status'],
-        ['OBJECT MANIPULATION', 'fa-edit',  'Provided Editing functionality for Out of the Box Flows']
+        ['OBJECT MANIPULATION', 'fa-edit',  'Provided the ability to modify the configurations for Out of the Box Flows']
         ];
         $scope.contactDetails   = [
         ['Age',                 '23'],

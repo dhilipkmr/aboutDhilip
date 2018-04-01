@@ -16,7 +16,7 @@
 </div>
 
 <!--  ABOUT ME -->
-<section class="about-me"> <!---->
+<section class="about-me  fadeInUp animated"> <!---->
 	<div class="container-fluid">
 		<div class="row card-intro">
 			<div class="row">
@@ -48,7 +48,7 @@
 <!-- SKILLS -->
 <div  class="skills-title">SKILLS</div>
 <section id="skills" class="skills">
-	<div  class="container-fluid">
+	<div class="container-fluid">
 		<div class="row mx-auto">
 			<div class="col-12 col-sm-5 mt-4 mb-sm-5 mb-0 mx-auto">
 				<skill1></skill1>
@@ -65,7 +65,7 @@
 <section class="projects mt-5">
 	<div class="container-fluid mb-5">
 		<div class="row" >
-			<div class="portfolioCard col-12 col-sm-6 col-lg-4 mt-4" ng-repeat="val in portfolioDetails">
+			<div class="portfolioCard zoomIn animated col-12 col-sm-6 col-lg-4 mt-4" ng-repeat="val in portfolioDetails">
 				<div class="project-cards" ng-mouseOver = "showDescription($event)" ng-mouseLeave = "showDescription($event)">
 					<div class="col info">
 						<div >
@@ -108,7 +108,7 @@
 
 
 <!-- EXPERIENCE -->
-<div class="timeLine-title text-center mt-5" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
+<div class="timeLine-title text-center mt-5 px-5 mx-auto" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
 <section class="timeLine mb-5">
 	<div class="row" ng-repeat="entry in experience">
 		<div class="col-md-6 col-0" ng-if="($index%2 ==1)"></div>
