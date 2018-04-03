@@ -72,7 +72,9 @@ function scrollFunction(e) {
 }
 
 
-
+function handleAbout(){
+    fadeUp
+}
 
 
 
