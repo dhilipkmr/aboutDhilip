@@ -223,14 +223,15 @@
   position: absolute;
   font-family: '';
   width: 90%;
-  top: 100%;
+  top: 13%;
   margin: auto;
   font-family: 'Open Sans', Sans Serif;
   line-height: 2.5;
   color: #455a64;
   font-weight: 600;
   font-size: 14px;
-  transition: all .5s ease-out;
+  transition: all 0.7s;
+  transform: scale(0);
 }
 .projects .project-cards .info{
   transition: all 0.4s ease-out;
@@ -243,8 +244,7 @@
   top:100%;
   }
 .projects .project-cards:hover > .portfolio-card-description{
-  top:16%;
-  left:5%;
+  transform: scale(1);
   }
 /*Experience & Edu*/
 .timeLine-title {
@@ -408,6 +408,30 @@
 }
 
 @media all and (max-width:575px) {
+  .projects .project-cards .portfolio-card-description{
+    position: relative;
+    transform: scale(1);
+    top:0%;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    
+  }
+  .projects .project-cards {
+    height : auto;
+  }
+  .projects .project-cards:hover{}
+
+  .projects .project-cards:hover > .portfolio-card-description{}
+  .projects .project-cards:hover > .info{
+  top:0%;
+  }
+/*.projects .project-cards:hover > .portfolio-card-description{
+  position: relative;
+  top:0%;
+  left:0%;
+  }*/
   .portfolioCard {
     padding: 0px !important;
   }

@@ -6,19 +6,7 @@
 
  controllers.controller('LandingController',
     function LandingControllerFnc($scope, $interval){
-        $scope.showDescription = function(e){
-            if(e.type === "mouseover"){
-                e.currentTarget.children[0].classList.add('hidden');
-                $(e.currentTarget).fadeIn(2000);
-                e.currentTarget.children[1].classList.remove('hidden');
-            } else if (e.type === "mouseleave") {
-                e.currentTarget.children[0].classList.remove('hidden');
-                e.currentTarget.children[1].classList.add('hidden');
-                setTimeout(function(){
-                    e.currentTarget.children[1].classList.remove('hidden');
-                },3);
-            }
-        };
+    
         $scope.handleMouseNav = function(e){
             if(e.type === "mouseover"){
                 var self = e,x=0;
@@ -89,7 +77,7 @@
         'project'               : 'Moving Object Detection and Alarming'
         }];
 
-        $scope.shortDescription = 'I\'m a Software Developer with two Years of Experience, Specialising in Front-end Technologies with a keen Interest towards Programming'; 
+        $scope.shortDescription = 'A Software Developer with two Years of Experience, Specialising in Front-end Technologies with a keen Interest towards Programming'; 
         $scope.details={
             'tools' : {
                 'IDE' : ['Eclipse', 'WebStorm', 'SublimeText', 'SQL Developer', 'Net Beans'],

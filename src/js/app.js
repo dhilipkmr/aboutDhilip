@@ -60,6 +60,7 @@ function scrollFunction(e) {
                     }
                     var interval = setInterval(fillBar,10);
                 })(node);
+
             });
         }
 }
