@@ -3,22 +3,28 @@
  */
  var resume = angular.module('app',['ngRoute','controllers']);
 
- resume.config(['$routeProvider', function($routeProvider){
-    $routeProvider
-    .when('/material',{
-        templateUrl : 'src/template/material.html',
-        controller : 'LandingController'
-    })
-    .when('/details',{
-        templateUrl : 'src/template/details.html',
-        controller : 'LandingController'
-    });
-}]);
+//  resume.config(['$routeProvider', function($routeProvider){
+//     $routeProvider
+//     .when('/',{
+//         templateUrl : 'src/template/material.html',
+//         controller : 'LandingController'
+//     })
+//     .when('/details',{
+//         templateUrl : 'src/template/details.html',
+//         controller : 'LandingController'
+//     });
+// }]);
 
 
  window.onscroll = function(e) {
     if(!window.testDone){
         scrollFunction(e);
+    }
+    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navigationCtrl").style.top = "0";
+
+    } else {
+        document.getElementById("navigationCtrl").style.top = "-200px";
     }
 };
 function scrollFunction(e) {

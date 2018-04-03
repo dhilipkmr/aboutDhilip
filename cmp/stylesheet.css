@@ -299,6 +299,7 @@
 .timeLine .timeLine-card .tl-card-desc {
   font-weight: 600;
   color : #555555;
+  font-family:'Open Sans', Sans;
 }
 .timeLine .timeLine-card .period {
   font-size: 12px;
