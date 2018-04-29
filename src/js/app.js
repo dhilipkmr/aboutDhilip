@@ -3,30 +3,17 @@
  */
  var resume = angular.module('app',['ngRoute','controllers']);
 
-//  resume.config(['$routeProvider', function($routeProvider){
-//     $routeProvider
-//     .when('/',{
-//         templateUrl : 'src/template/material.html',
-//         controller : 'LandingController'
-//     })
-//     .when('/details',{
-//         templateUrl : 'src/template/details.html',
-//         controller : 'LandingController'
-//     });
-// }]);
 
 
+//Using scroll event to fill up the progress bars under Skils
+var scrollTimer = null;
  window.onscroll = function(e) {
     if(!window.testDone){
-        scrollFunction(e);
-    }
-    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navigationCtrl").style.top = "0";
-
-    } else {
-        document.getElementById("navigationCtrl").style.top = "-200px";
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(scrollFunction(e), 500);
     }
 };
+
 function scrollFunction(e) {
         var scroll={};
         scroll.top          = window.scrollY;
@@ -70,18 +57,3 @@ function scrollFunction(e) {
             });
         }
 }
-
-
-function handleAbout(){
-    fadeUp
-}
-
-
-
-// $('#skillNav').mouseenter(function(e){console.log("ff")});
-// if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 20) {
-//         document.getElementById("navigationCtrl").style.top = "0";
-
-//     } else {
-//         document.getElementById("navigationCtrl").style.top = "-200px";
-//     }

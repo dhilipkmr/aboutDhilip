@@ -4,62 +4,45 @@
 	<title>About Me</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="cmp/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="src/styles/stylesheet.css">
 	
-	<!--Bootstrap-library , jquery Should be placed before Bootstrap in order, tether for bootstrap Tooltip-->
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-	<script src="lib/bootstrap/jquery.slim.min.js"></script>
-	<script src="lib/bootstrap/tether.min.js"></script>
-	<script src="lib/bootstrap/bootstrap.min.js"></script>
-	<script src="lib/bootstrap/popper.min.js"></script>
 	<!--Bootstrap-library-->
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
+	<!--Bootstrap-library-->
+
 	<!--angular-library-->
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/angular/angular.min.js"></script>
-	<script src="lib/angular/angular-animate.min.js"></script>
 	<script src="lib/angular/angular-route.min.js"></script>
 	<!--angular-library-->
 
-
+	<!--localFiles-->
 	<script src="src/js/app.js"></script>
 	<script src="src/js/controllers.js"></script>
 	<!--localFiles-->
 
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Dosis:800|Roboto|Open+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<!-- Fonts -->
 </head>
-<body class="b"">
+<body class="bodyBg">
 	<div ng-controller="LandingController">
-		<div class="image-bg">
-		</div>
-		<div class="navbar navbar-expand-sm hidden" id="navigationCtrl">
-			<!-- <div class="navbar-brand"></div> -->
-			<div class="navbar-nav collapse" id="navContainer">
-				<a class="nav-item nav-link active" ng-mouseOver="handleMouseNav($event)" ng-mouseLeave="handleMouseNav($event)"id="skillNav" >Skills</a>
-				<a class="nav-item nav-link active" href="skills" >Portfolio</a>
-				<a class="nav-item nav-link active" href="#">Education</a>
-				<a class="nav-item nav-link active" href="#">Experience</a>
-			</div>
-			<nav class="navbar navbar-dark bg-primary">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContainer" aria-controls="navContainer" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-			</nav>
-		</div>
+		<div class="image-bg"></div>
 
 		<!--  ABOUT ME -->
 		<section class="about-me  fadeInUp animated">
 			<div class="container-fluid">
 				<div class="row card-intro">
 					<div class="row">
-						<div class="side1 col-sm-5 col-11 mx-auto">
+						<div class="col-sm-5 col-12 side1 px-4">
 							<img src="https://dhilipkmr.github.io/materializedResume/src/img/yahiko.png" class="picture" alt="profile_pic"></img>
-							<div class="name"> DHILIP KUMAR</div>
-							<div class="role"> UI/UX DESIGNER & FRONTEND DEVELOPER</div>
+							<div class="name"> {{name}}</div>
+							<div class="role"> {{role}}</div>
 						</div>
-						<div class="side2 col col-sm-6 col-11 mt-5 text-left mx-auto  px-sm-3 px-5">
-							<div class="about-me-title">ABOUT ME</div>
+						<div class="col-sm-6 col-12 mt-5 text-left side2 ">
+							<div class="about-me-title">{{title1}}</div>
 							<div class="about-me-description">{{shortDescription}}</div>
 							<div class="about-contact">
 								<ul class="list-unstyled" ng-repeat="val in contactDetails">
@@ -72,6 +55,10 @@
 						</div>
 					</div> 
 					<div class="row text-left about-me-footer ml-0">
+						<div class="mx-auto mt-3">
+							<a title="LinkedIn" class= "mr-4" target="_blank" href="https://www.linkedin.com/in/dhilipkmr/"><i class="fa-2x fab fa-linkedin-in contactIcon"></i></a>
+							<a title="Github" target="_blank" href="https://github.com/dhilipkmr/"><i class="fa-2x fab fa-github contactIcon"></i></a>
+						</div>
 					</div>
 				</div> 
 			</div>
@@ -83,10 +70,28 @@
 			<div class="container-fluid">
 				<div class="row mx-auto">
 					<div class="col-12 col-sm-5 mt-4 mb-sm-5 mb-0 mx-auto">
-						<skill1></skill1>
+						<div ng-repeat="(prop, key) in technicalSkills1">
+							<div class="row-12 skillRow">
+								<div>
+									<span class="text-left skillName"> {{key[0]}}</span><span class="text-right percent">{{key[1]}}</span>
+									<div class="progress">
+										<div class="progress-bar  skillLevel"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="col-12 col-sm-5 mt-sm-4 mb-5  mx-auto">
-						<skill2></skill2>
+						<div ng-repeat="(prop, key) in technicalSkills2">
+							<div class="row-12 skillRow">
+								<div>
+									<span class="text-left skillName"> {{key[0]}}</span><span class="text-right percent">{{key[1]}}</span>
+									<div class="progress">
+										<div class="progress-bar  skillLevel"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -128,7 +133,7 @@
 								<span class="tl-card-desc">{{entry['branch']}}</span>
 							</div>
 							<div>
-								<div class="tl-card-projTopic">Project</div>
+								<div class="tl-card-projTopic">PROJECT</div>
 								<div class="tl-card-projDes">{{entry['project']}}</div>
 							</div>
 							<div dir="rtl" class="period">{{entry['period']}}</div>
