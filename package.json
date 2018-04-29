@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume with Material Design",
+  "dependencies": {
+    "live-server" : "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhilipk13/materializedResume.git"
+  },
+  "keywords": [
+    "resume",
+    "material design",
+    "angularJs"
+  ],
+  "author": "Dhilip kumar Velusamy <dhilip1211@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dhilipk13/materializedResume/issues"
+  },
+  "homepage": "https://github.com/Dhilipk13/materializedResume#readme"
+}
