@@ -4,33 +4,168 @@
 	<title>About Me</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="cmp/styles.css">
-	<!--Bootstrap-library , jquery Should be placed before Bootstrap in order, tether for bootstrap Tooltip-->
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-	<script src="lib/bootstrap/jquery.slim.min.js"></script>
-	<script src="lib/bootstrap/tether.min.js"></script>
-	<script src="lib/bootstrap/bootstrap.min.js"></script>
-	<script src="lib/bootstrap/popper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="src/styles/stylesheet.css">
+	
 	<!--Bootstrap-library-->
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
+	<!--Bootstrap-library-->
+
 	<!--angular-library-->
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/angular/angular.min.js"></script>
-	<script src="lib/angular/angular-animate.min.js"></script>
 	<script src="lib/angular/angular-route.min.js"></script>
 	<!--angular-library-->
 
-
+	<!--localFiles-->
 	<script src="src/js/app.js"></script>
 	<script src="src/js/controllers.js"></script>
 	<!--localFiles-->
 
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Dosis:800|Roboto|Open+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<!-- Fonts -->
 </head>
+<body class="bodyBg">
+	<div ng-controller="LandingController">
+		<div class="image-bg"></div>
 
-<body class="b">
-	<div ng-view></div>
+		<!--  ABOUT ME -->
+		<section class="about-me  fadeInUp animated">
+			<div class="container-fluid">
+				<div class="row card-intro">
+					<div class="row">
+						<div class="col-sm-5 col-12 side1 px-4">
+							<img src="https://dhilipkmr.github.io/materializedResume/src/img/yahiko.png" class="picture" alt="profile_pic"></img>
+							<div class="name"> {{name}}</div>
+							<div class="role"> {{role}}</div>
+						</div>
+						<div class="col-sm-6 col-12 mt-5 text-left side2 ">
+							<div class="about-me-title">{{title1}}</div>
+							<div class="about-me-description">{{shortDescription}}</div>
+							<div class="about-contact">
+								<ul class="list-unstyled" ng-repeat="val in contactDetails">
+									<li class="row">
+										<span class="col-3 spec">{{val[0]}}</span>
+										<span class="col-8 contact-info">{{val[1]}}</span>
+									</li>	
+								</ul>
+							</div>
+						</div>
+					</div> 
+					<div class="row text-left about-me-footer ml-0">
+						<div class="mx-auto mt-3">
+							<a title="LinkedIn" class= "mr-4" target="_blank" href="https://www.linkedin.com/in/dhilipkmr/"><i class="fa-2x fab fa-linkedin-in contactIcon"></i></a>
+							<a title="Github" target="_blank" href="https://github.com/dhilipkmr/"><i class="fa-2x fab fa-github contactIcon"></i></a>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</section>
+
+		<!-- SKILLS -->
+		<div  class="skills-title">SKILLS</div>
+		<section id="skills" name="skills" class="skills">
+			<div class="container-fluid">
+				<div class="row mx-auto">
+					<div class="col-12 col-sm-5 mt-4 mb-sm-5 mb-0 mx-auto">
+						<div ng-repeat="(prop, key) in technicalSkills1">
+							<div class="row-12 skillRow">
+								<div>
+									<span class="text-left skillName"> {{key[0]}}</span><span class="text-right percent">{{key[1]}}</span>
+									<div class="progress">
+										<div class="progress-bar  skillLevel"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-5 mt-sm-4 mb-5  mx-auto">
+						<div ng-repeat="(prop, key) in technicalSkills2">
+							<div class="row-12 skillRow">
+								<div>
+									<span class="text-left skillName"> {{key[0]}}</span><span class="text-right percent">{{key[1]}}</span>
+									<div class="progress">
+										<div class="progress-bar  skillLevel"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PORTFOLIO -->
+		<div class="projects-title">PORTFOLIO</div>
+		<section class="projects mt-5">
+			<div class="container-fluid mb-5">
+				<div class="row" >
+					<div class="portfolioCard zoomIn animated col-12 col-sm-6 col-lg-4 mt-4" ng-repeat="val in portfolioDetails">
+						<div class="project-cards">
+							<div class="col info">
+								<div >
+									<div class="text-center"><i class="fa mt-4 fa-2x icon" ng-class="[val[1]]"></i>
+									</div>
+									<div class="portfolio-card-info pt-2">{{val[0]}}</div>
+								</div>
+							</div>
+							<div class="col portfolio-card-description ml-sm-4">
+								<p>{{val[2]}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EDUCATION -->
+		<div class="timeLine-title text-center mt-5 "> EDUCATION</div>
+		<section class="timeLine">
+			<div class="row" ng-repeat="entry in education">
+				<div class="col-md-6" ng-if="($index%2 ==1)"></div>
+				<div class="col-md-6 col-12 rm-pr">
+					<div class="col-12 rm-pr">
+						<div class="timeLine-card px-3 py-3" ng-class="[($index %2===0)? 'left' : 'right']">
+							<div class="orgName text-uppercase" style="font-weight: 700">{{entry['name']}}</div>
+							<div> 
+								<span class="tl-card-desc">{{entry['branch']}}</span>
+							</div>
+							<div>
+								<div class="tl-card-projTopic">PROJECT</div>
+								<div class="tl-card-projDes">{{entry['project']}}</div>
+							</div>
+							<div dir="rtl" class="period">{{entry['period']}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- EXPERIENCE -->
+		<div class="timeLine-title text-center mt-5 px-5 mx-auto" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
+		<section class="timeLine mb-5">
+			<div class="row" ng-repeat="entry in experience">
+				<div class="col-md-6 col-0" ng-if="($index%2 ==1)"></div>
+				<div class="col-md-6 col-12 rm-pr">
+					<div class="col-12 rm-pr">
+						<div class="timeLine-card px-3 py-3" ng-class="[($index %2===0)? 'left' : 'right']">
+							<div class="orgName">{{entry['name']}}</div>
+							<div class="designation">{{entry['role']}}</div>
+							<div class="period" dir="rtl">{{entry['period']}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<footer class="footer">
+			<p class="footer-text"> © ALL RIGHTS RESERVED.</p>
+		</footer>
+	</div>
 </body>
 
 </html>
