@@ -80,7 +80,7 @@
   line-height: 2;
 }
 .about-me .card-intro .side2 {
-  padding:0px 30px;
+  padding:0px 50px;
 }
 .about-me .card-intro .side2 .about-me-title {
   font-family: 'Dosis', cursive;
@@ -515,5 +515,23 @@
 .contactIcon:hover {
   transform: scale(1.2);
   transition: 300ms;
+
+}
+
+.navigationBar ul {
+  z-index : 100;
+  list-style-type: none;
+  position: fixed;
+  top:0;
+  background-color: green;
+  display: block;
+}
+
+.navigationBar li {
+  font-family: 'Dosis', Cursive;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding-right: 15px;
+  color: #fff !important;
 
 }
