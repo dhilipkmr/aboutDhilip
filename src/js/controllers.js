@@ -17,9 +17,9 @@
         $scope.shortDescription = 'A Software Developer with two Years of Experience, Specialising in Front-end Technologies with a keen Interest towards Programming';
         $scope.contactDetails   = [
         ['Age',                 '23'],
-        ['Address',             'B 103, Isha Casablanca'],
         ['Email',               'dhilip1211@gmail.com'],
-        ['Phone',               '+91-9750568258']
+        ['Phone',               '+91-9750568258'],
+         ['Address',             'Bangalore 560103'],
         ];
         $scope.contactLink      = [
             ['', 'https://www.linkedin.com/in/dhilipkmr/'],
