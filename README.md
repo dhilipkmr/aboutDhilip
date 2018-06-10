@@ -1,5 +1,4 @@
-## Welcome to GitHub Pages
-
+## Welcome to My Github Repo
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 You can access the live website from dhilipkmr.github.io/materializedResume/
