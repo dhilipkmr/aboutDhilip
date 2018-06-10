@@ -31,10 +31,10 @@
         $scope.technicalSkills1 = [
         ['Javascript', '85%'],
         ['JQuery', '90%'],
-        ['React', '75%']
+        ['React', '75%'],
         ['Redux', '80%'],
-        ['AngularJs', '60%']
-        // ['Backbone', '80%'],
+        ['AngularJs', '60%'],
+        ['Backbone', '80%']
         ];
 
         //Left
@@ -44,7 +44,7 @@
         ['Bootstrap', '70%'],
         ['Java', '65%'],
         ['SQL', '80%'],
-        ['Progressive Web Apps', '70%'],
+        ['Progressive Web Apps', '70%']
         ];
 
         //Portfolio
