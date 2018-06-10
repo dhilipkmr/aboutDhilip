@@ -17,9 +17,9 @@
         $scope.shortDescription = 'A Software Developer with two years of Experience, specializing in Front-end Technologies with a keen interest towards Programming';
         $scope.contactDetails   = [
         ['Age',                 '23'],
-        ['Address',             'B 103, Isha Casablanca'],
         ['Email',               'dhilip1211@gmail.com'],
-        ['Phone',               '+91-9750568258']
+        ['Phone',               '+91-9750568258'],
+         ['Address',             'Bangalore 560103'],
         ];
         $scope.contactLink      = [
             ['', 'https://www.linkedin.com/in/dhilipkmr/'],
@@ -31,10 +31,10 @@
         $scope.technicalSkills1 = [
         ['Javascript', '85%'],
         ['JQuery', '90%'],
-        ['React', '75%']
+        ['React', '75%'],
         ['Redux', '80%'],
-        ['AngularJs', '60%']
-        // ['Backbone', '80%'],
+        ['AngularJs', '60%'],
+        ['Backbone', '80%']
         ];
 
         //Left
@@ -44,7 +44,7 @@
         ['Bootstrap', '70%'],
         ['Java', '65%'],
         ['SQL', '80%'],
-        ['Progressive Web Apps', '70%'],
+        ['Progressive Web Apps', '70%']
         ];
 
         //Portfolio
@@ -98,3 +98,4 @@
         }];
     
 });
+      
