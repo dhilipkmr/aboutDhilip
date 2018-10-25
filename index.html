@@ -122,6 +122,24 @@
 			</div>
 		</section>
 
+
+		<!-- EXPERIENCE -->
+		<div class="timeLine-title text-center mt-5 px-5 mx-auto" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
+		<section class="timeLine mb-5">
+			<div class="row" ng-repeat="entry in experience">
+				<div class="col-md-6 col-0" ng-if="($index%2 ==1)"></div>
+				<div class="col-md-6 col-12 rm-pr">
+					<div class="col-12 rm-pr">
+						<div class="timeLine-card px-3 py-3" ng-class="[($index %2===0)? 'left' : 'right']">
+							<div class="orgName">{{entry['name']}}</div>
+							<div class="designation">{{entry['role']}}</div>
+							<div class="period" dir="rtl">{{entry['period']}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- EDUCATION -->
 		<div class="timeLine-title text-center mt-5 "> EDUCATION</div>
 		<section class="timeLine">
@@ -144,25 +162,6 @@
 				</div>
 			</div>
 		</section>
-
-
-		<!-- EXPERIENCE -->
-		<div class="timeLine-title text-center mt-5 px-5 mx-auto" name="experience" id="experience">PROFESSIONAL EXPERIENCE</div>
-		<section class="timeLine mb-5">
-			<div class="row" ng-repeat="entry in experience">
-				<div class="col-md-6 col-0" ng-if="($index%2 ==1)"></div>
-				<div class="col-md-6 col-12 rm-pr">
-					<div class="col-12 rm-pr">
-						<div class="timeLine-card px-3 py-3" ng-class="[($index %2===0)? 'left' : 'right']">
-							<div class="orgName">{{entry['name']}}</div>
-							<div class="designation">{{entry['role']}}</div>
-							<div class="period" dir="rtl">{{entry['period']}}</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 
 		<footer class="footer">
 			<p class="footer-text"> © ALL RIGHTS RESERVED.</p>
