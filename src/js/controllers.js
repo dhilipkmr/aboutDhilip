@@ -52,14 +52,15 @@
         //Portfolio
         //Please add your font icon name in the second index of the array Preferred : Google fonts
         $scope.portfolioDetails =  [
-        ['DASHBOARD',           'fa-chart-line',  'A Summary Dashboard on Data Transfers Status for each jobs to identify & rectify errors'],
+        ['DASHBOARD',           'fas fa-columns',  'A Summary Dashboard on Data Transfers Status for each jobs to identify & rectify errors'],
         ['JOB SCHEDULE',        'fa-clock',  'Implemented a Wizard which allows users to schedule a Job, based on their choice'],
         ['QUICK SAVE',          'fa-save',  'Ability to immediately save Flows before the last screen which helped in faster modification of Flows'],
         ['TREE GRID',           'fa-th',  'Reduced the Page Loading time by implementing Lazy Load functionality as a part of Tree Grid'],
         ['QUICK FILTERS',       'fa-filter',  'Condition-based Record Filtering for Grids, based on Job\'s Start/End Time and Status'],
         ['OBJECT MANIPULATION', 'fa-edit',  'Provided the ability to modify the configurations for Out of the Box Flows'],
         ['FARE CALENDAR',      'far fa-calendar-alt', 'Created Lazyloaded Fare Calendar to let user the Cheapest Fare upfront just by scrolling through dates.'],
-        ['PWA MIGRATION',      'fas fa-mobile-alt', 'Migrated Goibibo Flights Mobile Website to PWA from Booking till Traveller Details page']
+        ['PWA MIGRATION',      'fas fa-mobile-alt', 'Migrated Goibibo Flights Mobile Website to PWA from Booking till Traveller Details page'],
+        ['FARE TRENDS',        'fa-chart-line',  'Developed an Independednt SVG Line-graph component which plots Fares on different dates for a given data set']
         ];
         
         //Education
