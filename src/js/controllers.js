@@ -29,12 +29,13 @@
         //Skills
         //Right
         $scope.technicalSkills1 = [
-        ['Javascript', '85%'],
+        ['Javascript', '90%'],
         ['JQuery', '90%'],
-        ['React', '75%'],
+        ['React', '85%'],
         ['Redux', '80%'],
-        ['AngularJs', '60%'],
-        ['Backbone', '80%']
+        ['Backbone', '80%'],
+        ['NodeJS', '60%'],
+        ['Mocha', '60%']
         ];
 
         //Left
@@ -42,6 +43,7 @@
         ['HTML', '85%'],
         ['Css', '75%'],
         ['Bootstrap', '70%'],
+        ['ExpressJS', '60%'],
         ['Java', '65%'],
         ['SQL', '80%'],
         ['Progressive Web Apps', '70%']
@@ -55,31 +57,39 @@
         ['QUICK SAVE',          'fa-save',  'Ability to immediately save Flows before the last screen which helped in faster modification of Flows'],
         ['TREE GRID',           'fa-th',  'Reduced the Page Loading time by implementing Lazy Load functionality as a part of Tree Grid'],
         ['QUICK FILTERS',       'fa-filter',  'Condition-based Record Filtering for Grids, based on Job\'s Start/End Time and Status'],
-        ['OBJECT MANIPULATION', 'fa-edit',  'Provided the ability to modify the configurations for Out of the Box Flows']
+        ['OBJECT MANIPULATION', 'fa-edit',  'Provided the ability to modify the configurations for Out of the Box Flows'],
+        ['FARE CALENDAR',      'far fa-calendar-alt', 'Created Lazyloaded Fare Calendar to let user the Cheapest Fare upfront just by scrolling through dates.'],
+        ['PWA MIGRATION',      'fas fa-mobile-alt', 'Migrated Goibibo Flights Mobile Website to PWA from Booking till Traveller Details page']
         ];
         
         //Education
         $scope.education        = [
+         {
+        'name'                  : 'PSG College Of Technology',
+        'branch'                : 'B.E. Computer Science',
+        'period'                : '2012-2016',
+        'project'               : 'Moving Object Detection and Alarming'
+        },
         {
         'name'                  : 'K.G. Matric. Hr. Sec. School',
         'branch'                : 'Computer Science',
         'period'                : '2006-2012',
         'project'               : 'Library Management System'
-        },
-        {
-        'name'                  : 'PSG College Of Technology',
-        'branch'                : 'B.E. Computer Science',
-        'period'                : '2012-2016',
-        'project'               : 'Moving Object Detection and Alarming'
-        }];
+        }
+        ];
 
 
         //Professional Experiennce
         $scope.experience       = [
+         {
+        'name'                  : 'Goibibo',
+        'role'                  : 'Senior Software Engineer',
+        'period'                : 'May 2018 - Present',
+        },
         {
         'name'                  : 'Oracle',
-        'role'                  : 'Intern',
-        'period'                : 'Jan 2016 - Jun 2016'
+        'role'                  : 'Applications Developer IC2',
+        'period'                : 'Dec 2017 - May 2018',
         },
         {
         'name'                  : 'Oracle',
@@ -88,14 +98,10 @@
         },
         {
         'name'                  : 'Oracle',
-        'role'                  : 'Applications Developer IC2',
-        'period'                : 'Dec 2017 - Apr 2018',
-        },
-        {
-        'name'                  : 'Goibibo',
-        'role'                  : 'Senior Software Engineer',
-        'period'                : 'May 2018 - Present',
-        }];
+        'role'                  : 'Intern',
+        'period'                : 'Jan 2016 - Jun 2016'
+        }
+        ];
     
 });
       
