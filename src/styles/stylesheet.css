@@ -269,6 +269,7 @@
   width: 75%;
   min-width: 270px;
   margin: auto;
+  margin-bottom: 15px;
 }
 .timeLine .timeLine-card {
   background-color: #fff;
@@ -384,9 +385,10 @@
 }
 .footer .footer-text {
   text-align: center;
-  padding-top: 20px;
+  padding: 20px;
   color: #ffffff;
   font-weight: 600;
+  margin-bottom: 0px;
 }
 .portfolioCard {
     padding-left: 0px !important;
