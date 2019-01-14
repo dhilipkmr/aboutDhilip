@@ -34,8 +34,8 @@
         ['React', '85%'],
         ['Redux', '80%'],
         ['Backbone', '80%'],
-        ['NodeJS', '60%'],
-        ['Mocha', '60%']
+        ['NodeJS', '80%'],
+        ['Mocha', '50%']
         ];
 
         //Left
@@ -43,7 +43,7 @@
         ['HTML', '85%'],
         ['Css', '75%'],
         ['Bootstrap', '70%'],
-        ['ExpressJS', '60%'],
+        ['MongoDB', '70%'],
         ['Java', '65%'],
         ['SQL', '80%'],
         ['Progressive Web Apps', '70%']
