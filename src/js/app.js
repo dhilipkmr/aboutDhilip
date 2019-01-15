@@ -41,19 +41,18 @@ function scrollFunction(e) {
             var $progressBar =  document.querySelectorAll(".skillLevel");
             var percentages = document.querySelectorAll(".percent");
             $progressBar.forEach(function(node, index){
-                node.style.width = "0%";
-                node.ww=0;
                 node.percent = parseInt(percentages[index].innerText.split("%")[0]);
-                (function(node){
-                    var fillBar = function(){
-                        node.style.width = ++node.ww + "%";
-                        if(node.ww===node.percent){
-                            clearTimeout(interval);
-                        }
-                    }
-                    var interval = setInterval(fillBar,10);
-                })(node);
-
+                node.style.width = node.percent + "%";
+//                 node.ww=0;
+//                 (function(node){
+//                     var fillBar = function(){
+//                         node.style.width = ++node.ww + "%";
+//                         if(node.ww===node.percent){
+//                             clearTimeout(interval);
+//                         }
+//                     }
+//                     var interval = setInterval(fillBar,10);
+//                 })(node);
             });
         }
 }
