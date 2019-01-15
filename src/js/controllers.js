@@ -16,7 +16,7 @@
         $scope.title1           = 'ABOUT ME';
         $scope.shortDescription = 'A Software Developer with two years of Experience, specializing in Front-end Technologies with a keen interest towards Programming';
         $scope.contactDetails   = [
-        ['Age',                 '23'],
+        ['Age',                 '24'],
         ['Email',               'dhilip1211@gmail.com'],
         ['Phone',               '+91-9750568258'],
          ['Address',             'Bangalore 560103'],
