@@ -16,5 +16,6 @@ Implemented using HTML5, CSS3, Javascript, AngularJS(only for iterations and for
 
 5.Any changes to any of the files will get reflected immediately in the browser if the server is running.
 
-## Still Doubts?
-Feel free to contact me @dhilip1211@gmail.com
+#Sample
+
+![alt Resume sample](https://github.com/dhilipkmr/webapp-samples/blob/master/images/resume/resume.png)
