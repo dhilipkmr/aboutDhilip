@@ -79,6 +79,27 @@
         }
         ];
 
+        //Blogs
+        $scope.blogs       = [
+            {
+           'name'                  : 'Understanding React Hooks',
+           'description'           : 'To understand basics of React Hooks and methods to access component lifecycles by building a timer',
+           'period'                : 'February 2019',
+           'link'                  : 'https://medium.com/@dhilipkmr/reacthooks-3f289f2377ab'
+           },
+           {
+           'name'                  : 'Chrome Extension for IMDB Call out',
+           'description'           : 'This Extension allows you to Just hover over the movie name text then you will see all its related Information. In the above publication, I have explained how I achieved it.',
+           'period'                : 'January 2019',
+           'link'                  : 'https://medium.com/@dhilipkmr/creating-a-google-chrome-extension-for-loading-movie-ratings-part-i-4b92c70ba0c2'
+           },
+           {
+           'name'                  : 'Creating Ripple Effect using React',
+           'description'           : 'A Technical blog on detailing how to create Ripple effect in React.',
+           'period'                : 'January 2019',
+           'link'                  : 'https://medium.com/@dhilipkmr/ripple-in-react-3162875cc9af'
+           }
+           ];
 
         //Professional Experiennce
         $scope.experience       = [
